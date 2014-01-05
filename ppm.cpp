@@ -135,7 +135,7 @@ unsigned int* decodePPM (FILE* stream, int* w, int* h, int* d) {
 					val = atoi(num);
 					if (val > depth) {
 						// also should never happen
-						printf("invalid ppm file: found a value greater than described depth.\n");
+						printf("invalid ppm file: found a value greater than prescribed depth.\n");
 						delete[] pixmap;
 						return NULL;
 					}
