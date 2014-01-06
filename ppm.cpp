@@ -252,7 +252,7 @@ int main(int argc, char* argv[]) {
 
 	// create an SDL context
 	SDL_Init(SDL_INIT_VIDEO);
-	SDL_Window* window = SDL_CreateWindow("OpenGL", X_POS, Y_POS, width, height, SDL_WINDOW_OPENGL);
+	SDL_Window* window = SDL_CreateWindow("PPM", X_POS, Y_POS, width, height, SDL_WINDOW_OPENGL);
 	SDL_GLContext context = SDL_GL_CreateContext(window);
 	SDL_Event event;
 	
