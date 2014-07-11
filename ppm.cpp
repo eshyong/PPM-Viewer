@@ -1,8 +1,10 @@
 // standard headers
+#include <cerrno>
 #include <cstdio>
 #include <cstdint>
 #include <cstdlib>
 #include <string>
+#include <unistd.h>
 
 // graphics headers
 #include <SDL2/SDL.h>
@@ -226,7 +228,7 @@ int main(int argc, char* argv[]) {
 	// open file stream in binary mode
 	FILE* stream = fopen(s.c_str(), "rb");
 	if (stream == NULL) {
-		printf("Error opening file.\n");
+        perror("fopen");
 		exit(1);
 	}
 
@@ -275,6 +277,7 @@ int main(int argc, char* argv[]) {
 		glRasterPos2i(-1.0f, -1.0f);
 		glDrawPixels(width, height, GL_RGBA, GL_UNSIGNED_BYTE, pixmap);
 		SDL_GL_SwapWindow(window);
+        usleep(100000);
 	}
 
 	// clean up SDL context
