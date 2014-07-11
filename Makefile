@@ -1,6 +1,6 @@
 CC=g++
-CFLAGS=-c -g -Wall -I/usr/local/Cellar/sdl2/2.0.1/include
-LDFLAGS=-L/usr/local/Cellar/sdl2/2.0.1/lib/ -lSDL2 -L/System/Library/Frameworks/OpenGL.framework/Libraries -lGL
+CFLAGS=-c -g -Wall -I/usr/local/Cellar/sdl2/2.0.3/include
+LDFLAGS=-L/usr/local/Cellar/sdl2/2.0.3/lib/ -lSDL2 -L/System/Library/Frameworks/OpenGL.framework/Libraries -lGL
 
 all: clean ppm
 
